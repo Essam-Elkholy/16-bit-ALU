@@ -1,8 +1,3 @@
-# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
-# Loading project ALU
-# reading C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini
-# Loading project ALU
-# reading C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini
 # Loading project ALU
 # Compile of CMP_UNIT.v was successful.
 # Compile of ALU_TOP_tb.v was successful.
@@ -56,6 +51,3 @@ run -all
 # --- SIMULATION COMPLETE ---
 # ** Note: $stop    : C:/Users/essam/Downloads/Digital IC Diploma/Assignments/ALU/ALU_TOP_tb.v(120)
 #    Time: 290 us  Iteration: 0  Instance: /ALU_TOP_tb
-# Break in Module ALU_TOP_tb at C:/Users/essam/Downloads/Digital IC Diploma/Assignments/ALU/ALU_TOP_tb.v line 120
-wave zoom full
-# {0 ns} {304500 ns}
