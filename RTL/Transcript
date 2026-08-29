@@ -1,0 +1,61 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Loading project ALU
+# reading C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project ALU
+# reading C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project ALU
+# Compile of CMP_UNIT.v was successful.
+# Compile of ALU_TOP_tb.v was successful.
+# Compile of SHIFT_UNIT.v was successful.
+# Compile of ALU_TOP.v was successful.
+# Compile of LOGIC_UNIT.v was successful.
+# Compile of ARITHMETIC_UNIT.v was successful.
+# Compile of Decoder.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.ALU_TOP_tb
+# vsim -gui work.ALU_TOP_tb 
+# Start time: 05:11:18 on Aug 29,2026
+# Loading work.ALU_TOP_tb
+# Loading work.ALU_TOP
+# Loading work.Decoder
+# Loading work.ARITHMETIC_UNIT
+# Loading work.LOGIC_UNIT
+# Loading work.CMP_UNIT
+# Loading work.SHIFT_UNIT
+add wave *
+run -all
+# --- STARTING 28-CASE ALU SIMULATION ---
+# Test:      ADD Neg+Neg | A:     -4, B:    -10 | ALU_FUN: 0000 | Arith_OUT:    -14, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      ADD Pos+Neg | A:     15, B:     -5 | ALU_FUN: 0000 | Arith_OUT:     10, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      ADD Neg+Pos | A:    -20, B:     30 | ALU_FUN: 0000 | Arith_OUT:     10, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      ADD Pos+Pos | A:     50, B:     25 | ALU_FUN: 0000 | Arith_OUT:     75, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      SUB Neg-Neg | A:    -15, B:    -10 | ALU_FUN: 0001 | Arith_OUT:     -5, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      SUB Pos-Neg | A:     20, B:     -5 | ALU_FUN: 0001 | Arith_OUT:     25, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      SUB Neg-Pos | A:    -10, B:     10 | ALU_FUN: 0001 | Arith_OUT:    -20, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      SUB Pos-Pos | A:     30, B:     15 | ALU_FUN: 0001 | Arith_OUT:     15, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      MUL Neg*Neg | A:     -3, B:     -4 | ALU_FUN: 0010 | Arith_OUT:     12, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      MUL Pos*Neg | A:      5, B:     -6 | ALU_FUN: 0010 | Arith_OUT:    -30, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      MUL Neg*Pos | A:     -7, B:      2 | ALU_FUN: 0010 | Arith_OUT:    -14, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      MUL Pos*Pos | A:      8, B:      8 | ALU_FUN: 0010 | Arith_OUT:     64, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      DIV Neg/Neg | A:    -20, B:     -5 | ALU_FUN: 0011 | Arith_OUT:      4, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      DIV Pos/Neg | A:     30, B:     -6 | ALU_FUN: 0011 | Arith_OUT:     -5, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      DIV Neg/Pos | A:    -40, B:      8 | ALU_FUN: 0011 | Arith_OUT:     -5, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      DIV Pos/Pos | A:     50, B:     10 | ALU_FUN: 0011 | Arith_OUT:      5, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      LOGIC AND   | A:   -256, B:   3855 | ALU_FUN: 0100 | Arith_OUT:      0, Logic_OUT:  3840, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      LOGIC OR    | A:   -256, B:   3855 | ALU_FUN: 0101 | Arith_OUT:      0, Logic_OUT: 65295, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      LOGIC NAND  | A:   -256, B:   3855 | ALU_FUN: 0110 | Arith_OUT:      0, Logic_OUT: 61695, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      LOGIC NOR   | A:   -256, B:   3855 | ALU_FUN: 0111 | Arith_OUT:      0, Logic_OUT:   240, CMP_OUT:     0, SHIFT_OUT:     0
+# Test:      CMP Equal   | A:     25, B:     25 | ALU_FUN: 1001 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     1, SHIFT_OUT:     0
+# Test:      CMP Greater | A:     50, B:     10 | ALU_FUN: 1010 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     2, SHIFT_OUT:     0
+# Test:      CMP Less    | A:      5, B:     80 | ALU_FUN: 1011 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     3, SHIFT_OUT:     0
+# Test:      SHIFT A >>  | A:      4, B:      0 | ALU_FUN: 1100 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     2
+# Test:      SHIFT A <<  | A:      4, B:      0 | ALU_FUN: 1101 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     8
+# Test:      SHIFT B >>  | A:      0, B:      8 | ALU_FUN: 1110 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     4
+# Test:      SHIFT B <<  | A:      0, B:      8 | ALU_FUN: 1111 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:    16
+# Test:      NOP         | A:     -1, B:     -1 | ALU_FUN: 1000 | Arith_OUT:      0, Logic_OUT:     0, CMP_OUT:     0, SHIFT_OUT:     0
+# --- SIMULATION COMPLETE ---
+# ** Note: $stop    : C:/Users/essam/Downloads/Digital IC Diploma/Assignments/ALU/ALU_TOP_tb.v(120)
+#    Time: 290 us  Iteration: 0  Instance: /ALU_TOP_tb
+# Break in Module ALU_TOP_tb at C:/Users/essam/Downloads/Digital IC Diploma/Assignments/ALU/ALU_TOP_tb.v line 120
+wave zoom full
+# {0 ns} {304500 ns}
