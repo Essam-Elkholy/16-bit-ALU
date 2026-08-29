@@ -6,7 +6,9 @@ A modular, synchronous 16-bit Arithmetic Logic Unit built from a central opcode 
 
 `ALU_TOP` decodes a 4-bit opcode (`ALU_FUN`) into individual enable signals and dispatches the operation to the matching sub-unit. Each sub-unit is only active when its enable is asserted, and only that unit's flag/output is meaningful on a given operation.
 
-![Top-level RTL (uut)](images/uut.png)
+<p align="center">
+  <img src="images/uut.png" alt="Top-level RTL (uut)" width="700">
+</p>
 
 | Sub-block          | Role                                                                 |
 |---------------------|-----------------------------------------------------------------------|
@@ -60,32 +62,52 @@ A modular, synchronous 16-bit Arithmetic Logic Unit built from a central opcode 
 ## Sub-Unit Details
 
 ### Decoder
-![Decoder symbol](images/Decoder.png)
-![Decoder RTL](images/Decoder_RTL.png)
+<p align="center">
+  <img src="images/Decoder.png" alt="Decoder symbol" width="700">
+</p>
+<p align="center">
+  <img src="images/Decoder_RTL.png" alt="Decoder RTL" width="700">
+</p>
 
 Combinationally maps the top 2 bits of `ALU_FUN` into one-hot enable signals for the four functional units.
 
 ### Arithmetic Unit
-![Arithmetic Unit symbol](images/ARITHMETIC_UNIT.png)
-![Arithmetic Unit RTL](images/ARITHMETIC_UNIT_RTL.png)
+<p align="center">
+  <img src="images/ARITHMETIC_UNIT.png" alt="Arithmetic Unit symbol" width="700">
+</p>
+<p align="center">
+  <img src="images/ARITHMETIC_UNIT_RTL.png" alt="Arithmetic Unit RTL" width="700">
+</p>
 
 Performs signed ADD, SUB, MUL, and DIV on `A` and `B`, active when `Arith_Enable` is high.
 
 ### Logic Unit
-![Logic Unit symbol](images/LOGIC_UNIT.png)
-![Logic Unit RTL](images/LOGIC_UNIT_RTL.png)
+<p align="center">
+  <img src="images/LOGIC_UNIT.png" alt="Logic Unit symbol" width="700">
+</p>
+<p align="center">
+  <img src="images/LOGIC_UNIT_RTL.png" alt="Logic Unit RTL" width="700">
+</p>
 
 Performs bitwise AND, OR, NAND, and NOR on `A` and `B`, active when `Logic_Enable` is high.
 
 ### Compare Unit
-![Compare Unit symbol](images/CMP_UNIT.png)
-![Compare Unit RTL](images/CMP_UNIT_RTL.png)
+<p align="center">
+  <img src="images/CMP_UNIT.png" alt="Compare Unit symbol" width="700">
+</p>
+<p align="center">
+  <img src="images/CMP_UNIT_RTL.png" alt="Compare Unit RTL" width="700">
+</p>
 
 Compares `A` and `B` for equality, greater-than, and less-than, active when `CMP_Enable` is high. Result is encoded on `CMP_OUT` (`1`=Equal, `2`=Greater, `3`=Less).
 
 ### Shift Unit
-![Shift Unit symbol](images/SHIFT_UNIT.png)
-![Shift Unit RTL](images/SHIFT_UNIT_RTL.png)
+<p align="center">
+  <img src="images/SHIFT_UNIT.png" alt="Shift Unit symbol" width="700">
+</p>
+<p align="center">
+  <img src="images/SHIFT_UNIT_RTL.png" alt="Shift Unit RTL" width="700">
+</p>
 
 Performs a logical shift (by 1 bit) left or right on either `A` or `B`, active when `Shift_Enable` is high.
 
@@ -118,7 +140,9 @@ All 28 test cases passed, each printed with the operand values, opcode, and all 
 
 ### Waveform
 
-![Simulation waveform](images/Wave.png)
+<p align="center">
+  <img src="images/Wave.png" alt="Simulation waveform" width="700">
+</p>
 
 ## Running the Simulation (ModelSim / QuestaSim)
 
